@@ -1,4 +1,4 @@
-# vue-webpack-generators
+# vue-webpack-mobile
 
 > Use vue + vuex + webpack to quickly build the project
 
