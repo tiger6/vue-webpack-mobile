@@ -1,30 +1,35 @@
-# vue-webpack-mobile
+# vue-webpack-mobile 简要说明
 
-> Use vue + vuex + webpack to quickly build the project
+> 快速利用vue + vuex + vue-router + vux + webpack 搭建移动端项目框架，仅供参考 
+> 框架内有一个小demo 供项目运行 测试用！！！
 
-## Build Setup
+## 程序构建
 
 ``` bash
-# install dependencies
+# 安装依赖关系
 npm install
 
-# serve with hot reload at localhost:8000
+请特别注意，直接使用 cnpm 可能会导致依赖不正确。强烈建议给 npm 设置 taobao 的 registry。 
+npm install --registry=https://registry.npm.taobao.org 
+
+# 开发环境浏览器查看效果-》 localhost:8000
 npm run dev
 
-# build for production with minification
+# 生产环境构建与压缩文件
 npm run build
 
-# build for production and view the bundle analyzer report
+# 生产环境构建并生成报告
 npm run build --report
 
-# run unit tests
+# 单元测试
 npm run unit
 
-# run e2e tests
+# e2e测试
 npm run e2e
 
-# run all tests
+# 所有测试
 npm test
 ```
+## License
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+[MIT](https://github.com/tigerliu2016/vue-webpack-mobile/blob/master/LICENSE) Copyright (c) 2017 tigerliu2016

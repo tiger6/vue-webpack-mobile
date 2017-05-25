@@ -14,7 +14,7 @@ if (process.env.NODE_ENV == 'development') {
 	baseUrl = '';
 	routerMode = 'history'
 } else {
-	baseUrl = 'https://m.douban.com';
+	baseUrl = 'https://api.douban.com';
 	routerMode = 'hash'
 }
 

@@ -6,7 +6,6 @@ import {
 
 export default {
 	[BOOK_LIST](state, payload) {
-		// console.log('sdfsdf222---', payload.events);
 		var srcObj = {},
 			eventList = payload.events,
 			bList = [];

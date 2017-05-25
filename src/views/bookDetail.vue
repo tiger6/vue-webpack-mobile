@@ -47,8 +47,6 @@ import {bookDetail} from '../service/getData'
   .detail {
     font-size: 12px;
     .m_content{
-    	/* height: 100vh;
-    	overflow: scroll; */
     	padding: 0.25rem;
     }
     img{

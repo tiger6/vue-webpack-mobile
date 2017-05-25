@@ -12,7 +12,6 @@ export default {
 		state
 	}) {
 		let res = await bookList();
-		// console.log('sdfsdf---', res);
 		commit(BOOK_LIST, res)
 	}
 }

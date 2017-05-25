@@ -18,8 +18,8 @@ import {setStore} from '../common/util'
 				showMenus: false,
 				routePath:'',
 				menus: {
-			        'zh': this.$t('中文'),
-			        'en': this.$t('English')
+			        'zh': `${this.$t('中文')}`,
+			        'en': `${this.$t('English')}`
 			    }
 			}
 		},
@@ -35,7 +35,8 @@ import {setStore} from '../common/util'
 		    },
 			changeLocale (locale) {
 				this.$i18n.locale=locale;
-				setStore('lang',locale)
+				setStore('lang',locale);
+				this.$emit('cLocale',locale);
 		    }
 		},
 		mounted(){
@@ -60,8 +61,6 @@ import {setStore} from '../common/util'
 </script>
 <style lang='less' scoped>
 	.m_head{
-		/* background-color: #eee;
-		text-align: center; */
 		width:100%;position:fixed;
 		left:0;top:0;z-index:100;
 	}

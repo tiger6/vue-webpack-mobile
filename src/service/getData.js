@@ -1,7 +1,9 @@
 import Axios from '../common/axios'
 import * as books from './tempdata/books'
 import * as bookDec from './tempdata/bookDetail'
-
+import {
+	baseUrl
+} from '../common/env'
 /**
  * 创建临时数据
  */
@@ -19,7 +21,7 @@ if (process.env.NODE_ENV == 'development') {
 	/**
 	 * 获取图书列表
 	 */
-	var bookList = () => Axios.get('/v2/event/list', {
+	var bookList = () => Axios.get(baseUrl + '/v2/event/list', {
 		params: {
 			loc: '108288',
 			count: '6'
@@ -28,7 +30,7 @@ if (process.env.NODE_ENV == 'development') {
 	/**
 	 * 获取图书详情
 	 */
-	var bookDetail = (bId) => Axios.get('/v2/event/' + bId);
+	var bookDetail = (bId) => Axios.get(baseUrl + '/v2/event/' + bId);
 }
 export {
 	bookList,

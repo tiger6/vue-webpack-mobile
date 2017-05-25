@@ -27,12 +27,4 @@ var i18n = new VueI18n({
 	messages: locale
 })
 
-if (module.hot) {
-	module.hot.accept([en, zh], () => {
-		i18n.setLocaleMessage('en', en)
-		i18n.setLocaleMessage('ja', zh)
-		console.log('hot reload', this, arguments)
-	})
-}
-
 export default i18n

@@ -2,9 +2,8 @@
 	<div class="m_home" style="height:100%">
 		<!-- home content -->
 		<view-box ref="viewBox" body-padding-top="46px" body-padding-bottom="55px">
-			<head-top></head-top>
+			<head-top @cLocale="cLocaleInfo"></head-top>
 			<div class="m_content">
-				<!-- <p>内容info</p> -->
 				 <panel :header="$t('msgList')" :footer="footer" :list="bookList" :type="type"></panel>
 			</div>
 			<foot-bottom></foot-bottom>
@@ -22,7 +21,7 @@ import {mapState, mapActions} from 'vuex'
 			return{
 				type: '1',
 		      	footer: {
-		        	title: this.$t('infoMore'),
+		        	title: `${this.$t('infoMore')}`,
 		        	url: 'http://www.douban.com'
 		      	}
 			}
@@ -33,6 +32,10 @@ import {mapState, mapActions} from 'vuex'
 		},
 		methods:{
 			...mapActions(['getBookList']),
+			cLocaleInfo(msg){
+				// 动态执行语言切换
+				this.footer.title=`${this.$t('infoMore')}`
+			}
 		},
 		mounted(){
             //获取用户信息
